@@ -43,7 +43,7 @@ info:
   build.version: $project.version$
 ---
 server:
-  port: 6002
+  port: 6003
   
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
