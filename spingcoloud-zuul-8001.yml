@@ -31,4 +31,4 @@ info:
   company.name: www.liaoyuangui.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
-
+---
