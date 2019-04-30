@@ -1,0 +1,28 @@
+server: 
+  port: 8001
+ 
+spring: 
+  application:
+    name: springcloud-zuul-gateway
+ 
+eureka: 
+  client: 
+    service-url: 
+      defaultZone:http://eureka9001.com:9001/eureka/,http://eureka9002.com:9002/eureka/,http://eureka9003.com:9003/eureka/
+  instance:
+    instance-id: springcloud-zuul-8001
+    prefer-ip-address: true 
+
+zuul: 
+  prefix: /liaoyuangui #统一前缀
+  ignored-services: "*" #禁用微服务名称访问
+  routes: 
+    #mydept.serviceId: servicecloud-person #服务id
+    mydept.path: /service/**
+
+info:
+  app.name: springcloud-zuul
+  company.name: www.liaoyuangui.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
