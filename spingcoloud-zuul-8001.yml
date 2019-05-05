@@ -30,10 +30,7 @@ zuul:
     mydept.serviceId: springcloud-person-select-test 
     mydept.path: /service/**
     #如果有多个服务则追加
-    mydept.serviceId: springcloud-person-update-test 
-    mydept.path: /service/**
-    mydept.serviceId: springcloud-person-delete-test 
-    mydept.path: /service/**
+
 
 info:
   app.name: springcloud-zuul
