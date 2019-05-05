@@ -27,8 +27,13 @@ zuul:
   # routes to serviceId 这里边是通过serviceid来绑定地址，当在路径后添加/api-a/   则是访问service-A对应的服务。
   routes:
     #服务id （服务名称） 
-    service.serviceId: springcloud-person-select-test 
-    service.path: /service/**
+    select.serviceId: springcloud-person-select-test 
+    select.path: /select/**
+    #如果有多个服务则追加
+    update.serviceId: springcloud-person-update-test 
+    update.path: /update/**
+    delete.serviceId: springcloud-person-delete-test 
+    delete.path: /delete/**
   
 
 info:
