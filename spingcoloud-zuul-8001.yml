@@ -14,7 +14,7 @@ spring:
 eureka: 
   client: 
     service-url: 
-      defaultZone:http://eureka9001.com:9001/eureka,http://eureka9002.com:9002/eureka,http://eureka9003.com:9003/eureka
+      defaultZone: http://eureka9001.com:9001/eureka,http://eureka9002.com:9002/eureka,http://eureka9003.com:9003/eureka
   instance:
     instance-id: springcloud-zuul-8001
     prefer-ip-address: true 
@@ -27,10 +27,13 @@ zuul:
   # routes to serviceId 这里边是通过serviceid来绑定地址，当在路径后添加/api-a/   则是访问service-A对应的服务。
   routes:
     #服务id （服务名称） 
-    a.serviceId: springcloud-person-select-test 
-    a.path: /a/**
+    mydept.serviceId: springcloud-person-select-test 
+    mydept.path: /service/**
     #如果有多个服务则追加
-
+    mydept.serviceId: springcloud-person-update-test 
+    mydept.path: /service/**
+    mydept.serviceId: springcloud-person-delete-test 
+    mydept.path: /service/**
 
 info:
   app.name: springcloud-zuul
