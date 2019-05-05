@@ -20,10 +20,19 @@ eureka:
     prefer-ip-address: true 
 
 zuul: 
-  prefix: /liaoyuangui #统一前缀
-  ignored-services: "*" #禁用微服务名称访问
-  routes: 
-    #mydept.serviceId: servicecloud-person #服务id
+  #统一前缀
+  prefix: /liaoyuangui
+  #禁用微服务名称访问
+  ignored-services: "*" 
+  # routes to serviceId 这里边是通过serviceid来绑定地址，当在路径后添加/api-a/   则是访问service-A对应的服务。
+  routes:
+    #服务id （服务名称） 
+    mydept.serviceId: springcloud-person-select-test 
+    mydept.path: /service/**
+    #如果有多个服务则追加
+    mydept.serviceId: springcloud-person-update-test 
+    mydept.path: /service/**
+    mydept.serviceId: springcloud-person-delete-test 
     mydept.path: /service/**
 
 info:
